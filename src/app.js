@@ -138,9 +138,16 @@ $(document).ready(function () {
   Object.keys(kubs).forEach((key) => {
     $(kubs[key]).click(function (e) {
       $(this).hide()
-      pts++
-      document.getElementById('current_pts').innerHTML = pts
+
       size = getRandomIntInclusive(20, 100)
+      if ($(this).width() < 40) {
+        pts++
+        pts++
+        document.getElementById('current_pts').innerHTML = pts
+      } else {
+        pts++
+        document.getElementById('current_pts').innerHTML = pts
+      }
 
       $(this).css({
         height: size,
