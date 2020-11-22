@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <span>Вы набрали <span id="points"></span> очков</span>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <span>Введите ваше имя:</span>
+            <form>
+              <div class="form-group">
+                <label for="player" class="form-control-label"></label>
+                <input type="text" class="form-control" id="player" />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Принять</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div id="main" class="main">
+        <div class="row">
+          <div class="col-sm-9">
+            <div class="top-block">
+              <div class="main-title">
+                <div class="card">
+                  <div class="card-header">Kubiki</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="actions">
+              <div class="buttons-container">
+                <div class="start-btn">
+                  <button
+                    id="start-btn"
+                    type="button"
+                    class="btn btn-outline-success"
+                  >
+                    Start
+                  </button>
+                </div>
+
+                <div class="new-game">
+                  <button
+                    id="new-game"
+                    type="button"
+                    class="btn btn-outline-info"
+                  >
+                    New Game
+                  </button>
+                </div>
+              </div>
+              <div class="game-details">
+                <div class="points">
+                  <span
+                    id="current_pts"
+                    class="current_pts text-monospace border border-secondary"
+                  >
+                    0
+                  </span>
+                </div>
+                <div class="time-left">
+                  <span
+                    id="current_time"
+                    class="border current_tm border-secondary"
+                    >60</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-9">
+            <div class="game-area border border-primary">
+              <div class="kub" id="kub1"></div>
+              <div class="kub" id="kub2"></div>
+              <div class="kub" id="kub3"></div>
+              <div class="kub" id="kub4"></div>
+              <div class="kub" id="kub5"></div>
+              <div class="kub" id="kub6"></div>
+              <div class="kub" id="kub7"></div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="rating border border-secondary">
+              <div id="rating-player" class="rating-player">
+                <ul></ul>
+                <span id="plr" class="player"></span>
+                <span id="plr-rtg"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"
+      integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf"
+      crossorigin="anonymous"
+    ></script>
+    <script src="src/app.js"></script>
+  </body>
+</html>
